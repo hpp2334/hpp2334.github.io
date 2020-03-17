@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hpp2334.github.io/"/>
-  <updated>2020-03-12T12:29:40.712Z</updated>
+  <updated>2020-03-17T07:32:12.073Z</updated>
   <id>http://hpp2334.github.io/</id>
   
   <author>
@@ -17,19 +17,20 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://hpp2334.github.io/2020/03/12/hello-world/"/>
-    <id>http://hpp2334.github.io/2020/03/12/hello-world/</id>
-    <published>2020-03-12T12:29:40.712Z</published>
-    <updated>2020-03-12T12:29:40.712Z</updated>
+    <title>我的前端面试知识点笔记</title>
+    <link href="http://hpp2334.github.io/2020/03/17/%E6%88%91%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%AC%94%E8%AE%B0/"/>
+    <id>http://hpp2334.github.io/2020/03/17/%E6%88%91%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-03-17T07:16:42.000Z</published>
+    <updated>2020-03-17T07:32:12.073Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这次2020春招，准备投前端的实习，花了半个月到一个月从头学起，整理了自己学习了的知识点供各位参考。</p><h2 id="别人家的知识点汇总"><a href="#别人家的知识点汇总" class="headerlink" title="别人家的知识点汇总"></a>别人家的知识点汇总</h2><ul><li>前端面试考点多？看这些文章就够了（2019年6月更新版）: <a href="https://juejin.im/post/5aae076d6fb9a028cc6100a9" target="_blank" rel="noopener">https://juejin.im/post/5aae076d6fb9a028cc6100a9</a>  </li></ul><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><h4 id="W3CSchool"><a href="#W3CSchool" class="headerlink" title="W3CSchool"></a>W3CSchool</h4><p>了解基础HTML，CSS，JS，TCP/IP。</p><p>参考：<br><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">https://www.w3school.com.cn/</a>  </p><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><h4 id="BFC-Block-Formatting-Context"><a href="#BFC-Block-Formatting-Context" class="headerlink" title="BFC(Block Formatting Context)"></a>BFC(Block Formatting Context)</h4><p>块格式上下文，float相关。</p><p>参考：<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context</a>  </p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;这次2020春招，准备投前端的实习，花了半个月到一个月从头学起，整理了自己学习了的知识点供各位参考。&lt;/p&gt;
+&lt;h2 id=&quot;别人家的知识点
       
     
     </summary>
