@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hpp2334.github.io/"/>
-  <updated>2020-03-17T13:44:36.540Z</updated>
+  <updated>2020-03-17T14:18:45.139Z</updated>
   <id>http://hpp2334.github.io/</id>
   
   <author>
@@ -18,21 +18,16 @@
   
   <entry>
     <title>我的前端面试知识点笔记</title>
-    <link href="http://hpp2334.github.io/2020/03/17/%E6%88%91%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%AC%94%E8%AE%B0/"/>
-    <id>http://hpp2334.github.io/2020/03/17/%E6%88%91%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%AC%94%E8%AE%B0/</id>
+    <link href="http://hpp2334.github.io/2020/03/17/note_web_front/"/>
+    <id>http://hpp2334.github.io/2020/03/17/note_web_front/</id>
     <published>2020-03-17T07:16:42.000Z</published>
-    <updated>2020-03-17T13:44:36.540Z</updated>
+    <updated>2020-03-17T14:18:45.139Z</updated>
     
-    <content type="html"><![CDATA[<!-- 这次2020春招，准备投前端的实习，花了半个月到一个月从头学起，整理了自己学习了的知识点供各位参考。 --><h2 id="别人家的知识点汇总"><a href="#别人家的知识点汇总" class="headerlink" title="别人家的知识点汇总"></a>别人家的知识点汇总</h2><ul><li>前端面试考点多？看这些文章就够了（2019年6月更新版）: <a href="https://juejin.im/post/5aae076d6fb9a028cc6100a9" target="_blank" rel="noopener">https://juejin.im/post/5aae076d6fb9a028cc6100a9</a>  </li></ul><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><h4 id="W3CSchool"><a href="#W3CSchool" class="headerlink" title="W3CSchool"></a>W3CSchool</h4><p>了解基础HTML，CSS，JS，TCP/IP。</p><p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">https://www.w3school.com.cn/</a>  </p><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><h4 id="文档流-普通流-Normal-Flow"><a href="#文档流-普通流-Normal-Flow" class="headerlink" title="文档流/普通流 (Normal Flow)"></a>文档流/普通流 (Normal Flow)</h4><p>?</p><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><ul><li>BFC(Block Formatting Context)：触发、用途  </li><li>display属性值flex, table, grid</li></ul><h4 id="float"><a href="#float" class="headerlink" title="float"></a>float</h4><ul><li>高度塌陷  </li></ul><h4 id="常见网页布局实现"><a href="#常见网页布局实现" class="headerlink" title="常见网页布局实现"></a>常见网页布局实现</h4><h5 id="水平对齐、垂直对齐"><a href="#水平对齐、垂直对齐" class="headerlink" title="水平对齐、垂直对齐"></a>水平对齐、垂直对齐</h5><h5 id="两列布局"><a href="#两列布局" class="headerlink" title="两列布局"></a>两列布局</h5><ol><li>左（右）列顶宽，右（左）列自适应</li><li>左（右）列不定宽，右（左）列自适应</li></ol><blockquote><p>不定宽指宽度会随内容的多少而改变。  </p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>这次2020春招，准备投前端的实习，花了半个月到一个月从头学起，整理了自己学习了的知识点供各位参考。</p><a id="more"></a><h2 id="别人家的知识点汇总"><a href="#别人家的知识点汇总" class="headerlink" title="别人家的知识点汇总"></a>别人家的知识点汇总</h2><ul><li>前端面试考点多？看这些文章就够了（2019年6月更新版）: <a href="https://juejin.im/post/5aae076d6fb9a028cc6100a9" target="_blank" rel="noopener">https://juejin.im/post/5aae076d6fb9a028cc6100a9</a>  </li></ul><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><h4 id="W3CSchool"><a href="#W3CSchool" class="headerlink" title="W3CSchool"></a>W3CSchool</h4><p>了解基础HTML，CSS，JS，TCP/IP。</p><p><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">https://www.w3school.com.cn/</a>  </p><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><h4 id="文档流-普通流-Normal-Flow"><a href="#文档流-普通流-Normal-Flow" class="headerlink" title="文档流/普通流 (Normal Flow)"></a>文档流/普通流 (Normal Flow)</h4><p>?</p><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><ul><li>BFC(Block Formatting Context)：触发、用途  </li><li>display属性值flex, table, grid</li></ul><h4 id="float"><a href="#float" class="headerlink" title="float"></a>float</h4><ul><li>高度塌陷  </li></ul><h4 id="常见网页布局实现"><a href="#常见网页布局实现" class="headerlink" title="常见网页布局实现"></a>常见网页布局实现</h4><h5 id="水平对齐、垂直对齐"><a href="#水平对齐、垂直对齐" class="headerlink" title="水平对齐、垂直对齐"></a>水平对齐、垂直对齐</h5><h5 id="两列布局"><a href="#两列布局" class="headerlink" title="两列布局"></a>两列布局</h5><ol><li>左（右）列顶宽，右（左）列自适应</li><li>左（右）列不定宽，右（左）列自适应</li></ol><blockquote><p>不定宽指宽度会随内容的多少而改变。  </p></blockquote><h5 id="三列布局"><a href="#三列布局" class="headerlink" title="三列布局"></a>三列布局</h5><p>1. </p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;!-- 这次2020春招，准备投前端的实习，花了半个月到一个月从头学起，整理了自己学习了的知识点供各位参考。 --&gt;
-
-&lt;h2 id=&quot;别人家的知识点汇总&quot;&gt;&lt;a href=&quot;#别人家的知识点汇总&quot; class=&quot;headerlink&quot; title=&quot;别人家的知识点汇总&quot;&gt;&lt;/
-      
+      &lt;p&gt;这次2020春招，准备投前端的实习，花了半个月到一个月从头学起，整理了自己学习了的知识点供各位参考。&lt;/p&gt;
     
     </summary>
     
