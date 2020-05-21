@@ -29,8 +29,9 @@
 <meta property="og:description" content="本文根据Promise&#x2F;A+规范实现一个简易的Promise">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://hpp2334-1252277898.cos.ap-guangzhou.myqcloud.com/0a6a0f6e-73f2-5b06-b32a-a403ef9c737d.png">
+<meta property="og:image" content="http://hpp2334.github.io/2020/05/21/20200521_promise-implementation/card.png">
 <meta property="article:published_time" content="2020-05-21T12:56:59.000Z">
-<meta property="article:modified_time" content="2020-05-21T17:01:46.045Z">
+<meta property="article:modified_time" content="2020-05-21T17:08:36.940Z">
 <meta property="article:author" content="hpp2334">
 <meta property="article:tag" content="JavaScript Basic">
 <meta name="twitter:card" content="summary">
@@ -160,7 +161,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是Promise"><span class="post-toc-number">2.</span> <span class="post-toc-text">什么是Promise</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Promise的简易实现"><span class="post-toc-number">3.</span> <span class="post-toc-text">Promise的简易实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说明"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">说明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-Promise-States"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2.1 Promise States</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#状态取值"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">状态取值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#状态转变"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">状态转变</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#"><span class="post-toc-number">3.3.</span> <span class="post-toc-text"></span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是Promise"><span class="post-toc-number">2.</span> <span class="post-toc-text">什么是Promise</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Promise的简易实现"><span class="post-toc-number">3.</span> <span class="post-toc-text">Promise的简易实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说明"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">说明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-Promise-States"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2.1 Promise States</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#状态取值"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">状态取值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#状态转变"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">状态转变</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -184,7 +185,9 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>本文根据Promise/A+规范实现一个简易的Promise</p>
+            <blockquote>
+<p>本文根据Promise/A+规范实现一个简易的Promise</p>
+</blockquote>
 <a id="more"></a>
 
 <figure class="image-bubble">
@@ -212,7 +215,14 @@
 <p>可以实现<code>Promise.prototype[FUNC_FULFILL]</code>方法实现到<code>fulfilled</code>状态的转变，<code>Promise.prototype[FUNC_REJECT]</code>方法实现到<code>rejected</code>状态的转变，在两个方法内部都先判定以下状态是不是<code>pending</code>，是才修改状态，设置<code>value</code>或<code>reason</code>。我们只通过上述两个方法实现Promise的状态转变，由于状态的判定和设置，易知对于同一个Promise，当两个方法中的一个执行了内部逻辑，以后两个方法的内部逻辑都不会被执行。于是，两个稍微难一些的目标就能够简单的达成。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2.1 Promise States</span></span><br><span class="line"><span class="keyword">const</span> [ FULFILLED, PENDING, REJECTED ] = [ <span class="string">'FULFILLED'</span>, <span class="string">'PENDING'</span>, <span class="string">'REJECTED'</span> ];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Promise</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.status = PENDING;  <span class="comment">// 2.1 Promise States</span></span><br><span class="line">  <span class="keyword">this</span>.value = <span class="literal">null</span>;      <span class="comment">// 2.1.2.2 must have a value, which must not change.</span></span><br><span class="line">  <span class="keyword">this</span>.reason = <span class="literal">null</span>;     <span class="comment">// 2.1.3.2 must have a reason, which must not change.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Promise</span>.prototype[FUNC_FULFILL] = <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 2.1.1.1 When pending, a promise: may transition to either the fulfilled or rejected state.</span></span><br><span class="line">  <span class="comment">// 2.1.2.1 When fulfilled, a promise: must not transition to any other state.</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.status === PENDING) &#123;</span><br><span class="line">    <span class="keyword">this</span>.status = FULFILLED;</span><br><span class="line">    <span class="keyword">this</span>.value = value;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Promise</span>.prototype[FUNC_REJECT] = <span class="function"><span class="keyword">function</span> (<span class="params">reason</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 2.1.3.1 must not transition to any other state.</span></span><br><span class="line">  <span class="comment">// 2.1.3.2 must have a reason, which must not change.</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.status === PENDING) &#123;</span><br><span class="line">    <span class="keyword">this</span>.status = REJECTED;</span><br><span class="line">    <span class="keyword">this</span>.reason = reason;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="./card.png" alt="card" title="">
+                </div>
+                <div class="image-caption">card</div>
+            </figure>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -220,7 +230,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-05-21T17:01:46.045Z" itemprop="dateUpdated">2020-05-22 01:01:46</time>
+    Last updated: <time datetime="2020-05-21T17:08:36.940Z" itemprop="dateUpdated">2020-05-22 01:08:36</time>
 </span><br>
 
 
@@ -262,7 +272,9 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hpp2334.github.io/2020/05/21/20200521_promise-implementation/&title=《Promise | Promise的简易实现》 — hpp2334's blog&source=本文根据Promise/A+规范实现一个简易的Promise" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hpp2334.github.io/2020/05/21/20200521_promise-implementation/&title=《Promise | Promise的简易实现》 — hpp2334's blog&source=
+本文根据Promise/A+规范实现一个简易的Promise
+" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -375,7 +387,9 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hpp2334.github.io/2020/05/21/20200521_promise-implementation/&title=《Promise | Promise的简易实现》 — hpp2334's blog&source=本文根据Promise/A+规范实现一个简易的Promise" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hpp2334.github.io/2020/05/21/20200521_promise-implementation/&title=《Promise | Promise的简易实现》 — hpp2334's blog&source=
+本文根据Promise/A+规范实现一个简易的Promise
+" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
